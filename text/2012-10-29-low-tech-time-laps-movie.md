@@ -26,6 +26,7 @@ I've been looking for a way to stream from our last week translation sprint in B
   - I want a snapshot every 5 seconds
   - I want the snapstho to be very low quality (30% jpeg quality)
   - The snapshot is saved into the capture.jpg file
+
 - A second script (<kbd>upload.sh</kbd>):
 
 <pre>
