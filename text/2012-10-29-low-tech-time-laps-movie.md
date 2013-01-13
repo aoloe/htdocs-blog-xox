@@ -28,11 +28,13 @@ I've been looking for a way to stream from our last week translation sprint in B
   - The snapshot is saved into the capture.jpg file
 - A second script (<kbd>upload.sh
 
+<pre>
     \#!/bin/bash
     ncftpput yourserver webcam/ capture.jpg
     now=`date +%Y%m%d_%H%M_%S`
     thishour=`date +%Y%m%d_%H`
     cp capture.jpg capture_$now.jpg
+</pre>
 
   Of course, if you only want to have a timelaps movie, without a live view, you don't have to upload the file to the webserver!
 - I've tried to put the webcam as high as possible!
@@ -41,10 +43,10 @@ I've been looking for a way to stream from our last week translation sprint in B
 
 You simply have to add an HTML file on your webserver (in my case <kbd>/index.html</kbd>) that shows the uploaded images and reload it through some javascript at the same interval as the snapshot are taken:
 
-    &lt;html&gt;
-    &lt;head&gt;
-    &lt;title&gt;webcam&lt;/title&gt;
-    &lt;script&gt;
+    <html>
+    <head>
+    <title>webcam</title>
+    <script>
     var url = "capture.jpg";
     function srcreload() {
         var image = document.getElementById("capture");
@@ -55,13 +57,13 @@ You simply have to add an HTML file on your webserver (in my case <kbd>/index.ht
 
     setTimeout(srcreload, 5000);
 
-    &lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;title&gt;webcam&lt;/title&gt;
-    &lt;img id="capture" src="capture.jpg" /&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
+    </script>
+    </head>
+    <body>
+    <title>webcam</title>
+    <img id="capture" src="capture.jpg" />
+    </body>
+    </html>
 
 If you're on a shared hosting, make sure that that you're not producing too much traffic upstream (your uploads) or downstream (your visitors looking at your images).
 
