@@ -17,7 +17,7 @@ I've been looking for a way to stream from our last week translation sprint in B
 - I wrote a small script that uses fswebcam to take a snapshot every n seconds:
 
 <pre>
-    \#!/bin/bash
+    #!/bin/bash
     fswebcam -d v4l2:/dev/video1 -i 0 -r 640x480 -l 5 --jpeg 30 --no-banner capture.jpg --exec ./upload.sh
 </pre>
 
@@ -26,10 +26,10 @@ I've been looking for a way to stream from our last week translation sprint in B
   - I want a snapshot every 5 seconds
   - I want the snapstho to be very low quality (30% jpeg quality)
   - The snapshot is saved into the capture.jpg file
-- A second script (<kbd>upload.sh
+- A second script (<kbd>upload.sh</kbd>):
 
 <pre>
-    \#!/bin/bash
+    #!/bin/bash
     ncftpput yourserver webcam/ capture.jpg
     now=`date +%Y%m%d_%H%M_%S`
     thishour=`date +%Y%m%d_%H`
