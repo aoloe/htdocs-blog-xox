@@ -4,7 +4,7 @@ date:29.10.2012
 ---
 I've been looking for a way to stream from our last week translation sprint in Brescia and I've finally found a very simple and cheap solution.
 
-## Specifications:
+### Specifications:
 
 - An old laptop (my old eeePC with Debian Testing)
 - A cheap Webcam (if possible not the built-in one)
@@ -12,7 +12,7 @@ I've been looking for a way to stream from our last week translation sprint in B
 - fswebcam, and ffmpeg
 - ncftpput, a cheap webspace if you want to "stream" the images
 
-## Capturing the images
+### Capturing the images
 
 I wrote a small script that uses fswebcam to take a snapshot every n seconds:
 
@@ -44,7 +44,7 @@ Some notes:
 
 - I've tried to put the webcam as high as possible!
 
-## Showing the stream
+### Showing the stream
 
 You simply have to add an HTML file on your webserver (in my case <kbd>/index.html</kbd>) that shows the uploaded images and reload it through some javascript at the same interval as the snapshot are taken:
 
@@ -72,7 +72,7 @@ You simply have to add an HTML file on your webserver (in my case <kbd>/index.ht
 
 If you're on a shared hosting, make sure that that you're not producing too much traffic upstream (your uploads) or downstream (your visitors looking at your images).
 
-## Creating the time-laps movie
+### Creating the time-laps movie
 
 Once your event is over and you have all the images in a directory:
 
