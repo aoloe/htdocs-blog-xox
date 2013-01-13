@@ -6,7 +6,7 @@ just run
 
     import sys, random; print "".join([random.choice(["╱", "╲"]) for x in range(2000)])
 
-and you'll get
+and you'll get:
 
     ╱╱╱╲╱╲╱╲╱╲╲╱╲╱╱╱╱╲╱╱╲╱╲╱╱╲╲╲╱╱╱╱╲╱╱╱╱╱╱╲╲╲╲╲╱╱╲╱╱╱╲╲╱╱╲╲╲╱╲╱
     ╲╱╱╲╲╱╱╱╱╲╱╱╲╱╲╲╱╱╱╲╱╲╲╲╱╱╲╱╲╱╱╱╲╱╱╲╲╲╲╲╱╱╲╱╱╲╱╲╱╲╱╲╲╱╱╱╱╲╲╱
