@@ -16,8 +16,10 @@ I've been looking for a way to stream from our last week translation sprint in B
 
 - I wrote a small script that uses fswebcam to take a snapshot every n seconds:
 
+<pre>
     \#!/bin/bash
     fswebcam -d v4l2:/dev/video1 -i 0 -r 640x480 -l 5 --jpeg 30 --no-banner capture.jpg --exec ./upload.sh
+</pre>
 
   - I'm using the external webcam (that's why it's video1 and not viedo0)
   - 640x480 is already pretty big for what i need...
