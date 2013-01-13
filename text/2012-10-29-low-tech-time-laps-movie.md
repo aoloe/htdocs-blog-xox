@@ -14,19 +14,21 @@ I've been looking for a way to stream from our last week translation sprint in B
 
 ## Capturing the images
 
-- I wrote a small script that uses fswebcam to take a snapshot every n seconds:
+I wrote a small script that uses fswebcam to take a snapshot every n seconds:
 
 <pre>
     #!/bin/bash
     fswebcam -d v4l2:/dev/video1 -i 0 -r 640x480 -l 5 --jpeg 30 --no-banner capture.jpg --exec ./upload.sh
 </pre>
 
+The parameters mean:
   - I'm using the external webcam (that's why it's video1 and not viedo0)
   - 640x480 is already pretty big for what i need...
   - I want a snapshot every 5 seconds
   - I want the snapstho to be very low quality (30% jpeg quality)
   - The snapshot is saved into the capture.jpg file
-- A second script (upload.sh):
+
+A second script uploads and caches each image:
 
 <pre>
     #!/bin/bash
@@ -37,6 +39,9 @@ I've been looking for a way to stream from our last week translation sprint in B
 </pre>
 
   Of course, if you only want to have a timelaps movie, without a live view, you don't have to upload the file to the webserver!
+
+Some notes:
+
 - I've tried to put the webcam as high as possible!
 
 ## Showing the stream
