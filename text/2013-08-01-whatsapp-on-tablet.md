@@ -1,0 +1,8 @@
+- go to whatsapp.com and download the android app
+- upload the file to your tablet through google drive
+- start the installation
+- (if you have not done so yet, allow the installation of unverified apps when prompted and then restart the install process)
+- setup your account by giving your name and mobile number (yes, you need one!)
+- let whatsapp send you an SMS, ignore it and wait until the five minutes waiting time are over.
+- accept the offer by whatsapp to call you by phone and telly you a different registration number, and type that number in the correct field.
+- now you are in!
